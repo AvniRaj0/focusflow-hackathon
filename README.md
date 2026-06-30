@@ -81,7 +81,7 @@ FocusFlow/
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/AvniRaj0/focusflow-hackathon>
 ```
 
 Open the project folder and launch `index.html` using Live Server or any local web server.
