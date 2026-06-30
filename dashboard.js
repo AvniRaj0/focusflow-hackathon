@@ -2,7 +2,7 @@
 // DASHBOARD AI
 // =========================================
 
-const API_KEY = prompt("Enter your Gemini API Key");;
+const API_KEY = "AQ.Ab8RN6KK-mUOI5IjrumW0GywLzadNbIGO7DUIDF1qh6pck9dsA";
 
 console.log("Dashboard JS Loaded!");
 
