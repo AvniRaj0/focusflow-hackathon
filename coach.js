@@ -1,4 +1,4 @@
-const API_KEY = "AQ.Ab8RN6KK-mUOI5IjrumW0GywLzadNbIGO7DUIDF1qh6pck9dsA";// =========================================
+const API_KEY = prompt("Enter your Gemini API Key");// =========================================
 // AI COACH
 // =========================================
 
