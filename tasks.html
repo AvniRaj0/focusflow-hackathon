@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow — Tasks</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="ff-app-container">
+        
+        <!-- ========================================= -->
+        <!-- SHARED SIDEBAR COMPONENT                  -->
+        <!-- ========================================= -->
+        <aside class="ff-sidebar">
+            <div class="ff-brand">
+                <svg class="ff-icon-accent ff-brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+                <span class="ff-brand-text">FocusFlow</span>
+            </div>
+            <nav class="ff-nav-menu">
+                <a href="dashboard.html" class="ff-nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="tasks.html" class="ff-nav-item ff-active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    <span>Tasks</span>
+                </a>
+                <a href="habits.html" class="ff-nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <span>Habits</span>
+                </a>
+                <a href="coach.html" class="ff-nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 7.54 16.59c-.44.47-.64 1.12-.54 1.76l.33 2.05a.5.5 0 0 1-.72.52l-1.92-.96a1.4 1.4 0 0 0-1.25-.03A10 10 0 1 1 12 2z"/></svg>
+                    <span>AI Coach</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- ========================================= -->
+        <!-- TASKS VIEW CONTENT                        -->
+        <!-- ========================================= -->
+        <main class="ff-main-view">
+            <header class="ff-view-header">
+                <h1 class="ff-title-view">Tasks</h1>
+                <button id="addTaskBtn" class="ff-btn-action ff-btn-accent ff-btn-header">
+    ADD TASK
+</button>
+            </header>
+
+            <div id="taskContainer" class="ff-tasks-grid">
+                
+                <!-- Task Card 1 -->
+                <div class="ff-glass-card ff-task-profile-card">
+                    <h2 class="ff-task-card-title">DBMS Assignment</h2>
+                    <div class="ff-task-data-matrix">
+                        <div class="ff-matrix-row"><span class="ff-m-label">Due:</span><span class="ff-m-val">2026-06-28</span></div>
+                        <div class="ff-matrix-row"><span class="ff-m-label">Priority:</span><span class="ff-m-val ff-high-alert">High</span></div>
+                        <div class="ff-matrix-row"><span class="ff-m-label">Est Time:</span><span class="ff-m-val">4 Hours</span></div>
+                        <div class="ff-matrix-row"><span class="ff-m-label">Effort:</span><span class="ff-m-val">Medium</span></div>
+                    </div>
+                    <div class="ff-status-banner-card">Status: Pending</div>
+                    <div class="ff-card-action-bar">
+                        <button class="ff-btn-subtle ff-btn-edit">EDIT</button>
+                        <button class="ff-btn-subtle ff-btn-delete">DELETE</button>
+                    </div>
+                </div>
+
+                <!-- Task Card 2 -->
+                <div class="ff-glass-card ff-task-profile-card">
+                    <h2 class="ff-task-card-title">Hackathon Submission</h2>
+                    <div class="ff-task-data-matrix">
+                        <div class="ff-matrix-row"><span class="ff-m-label">Due:</span><span class="ff-m-val">2026-06-29</span></div>
+                        <div class="ff-matrix-row"><span class="ff-m-label">Priority:</span><span class="ff-m-val ff-high-alert">High</span></div>
+                        <div class="ff-matrix-row"><span class="ff-m-label">Est Time:</span><span class="ff-m-val">8 Hours</span></div>
+                        <div class="ff-matrix-row"><span class="ff-m-label">Effort:</span><span class="ff-m-val">High</span></div>
+                    </div>
+                    <div class="ff-status-banner-card">Status: Pending</div>
+                    <div class="ff-card-action-bar">
+                        <button class="ff-btn-subtle ff-btn-edit">EDIT</button>
+                        <button class="ff-btn-subtle ff-btn-delete">DELETE</button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <!-- ===========================
+     ADD TASK MODAL
+=========================== -->
+<div id="addTaskModal" class="ff-modal">
+
+    <div class="ff-modal-content">
+
+        <span id="closeTaskModal" class="ff-close">&times;</span>
+
+        <h2>Add New Task</h2>
+
+        <input id="taskName" type="text" placeholder="Task name">
+
+<input id="taskDate" type="date">
+
+<select id="taskPriority">
+    <option>Low Priority</option>
+    <option>Medium Priority</option>
+    <option>High Priority</option>
+</select>
+
+<input id="taskTime" type="number" placeholder="Estimated Time (minutes)">
+      <button id="saveTaskBtn" class="ff-btn-action ff-btn-accent">
+    Save Task
+</button>
+
+    </div>
+
+</div>
+...
+</div>
+
+<script src="tasks.js"></script>
+
+</body>
+</body>
+</html>

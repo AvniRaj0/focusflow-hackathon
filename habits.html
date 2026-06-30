@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow — Habits</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="ff-app-container">
+        
+        <!-- ========================================= -->
+        <!-- SHARED SIDEBAR COMPONENT                  -->
+        <!-- ========================================= -->
+        <aside class="ff-sidebar">
+            <div class="ff-brand">
+                <svg class="ff-icon-accent ff-brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+                <span class="ff-brand-text">FocusFlow</span>
+            </div>
+            <nav class="ff-nav-menu">
+                <a href="dashboard.html" class="ff-nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="tasks.html" class="ff-nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    <span>Tasks</span>
+                </a>
+                <a href="habits.html" class="ff-nav-item ff-active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <span>Habits</span>
+                </a>
+                <a href="coach.html" class="ff-nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 7.54 16.59c-.44.47-.64 1.12-.54 1.76l.33 2.05a.5.5 0 0 1-.72.52l-1.92-.96a1.4 1.4 0 0 0-1.25-.03A10 10 0 1 1 12 2z"/></svg>
+                    <span>AI Coach</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- ========================================= -->
+        <!-- HABITS VIEW CONTENT                       -->
+        <!-- ========================================= -->
+        <main class="ff-main-view">
+            <header class="ff-view-header">
+                <h1 class="ff-title-view">Habits</h1>
+            </header>
+
+            <!-- Top Level Habit Insights Display -->
+            <section class="ff-premium-banner ff-habit-insights-banner">
+                <div class="ff-banner-title-row">
+                    <svg class="ff-banner-header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+                    <h3>Habit Insights</h3>
+                </div>
+                <div class="ff-banner-nested-grid">
+                    <div class="ff-nested-insight-card">
+                        <p class="ff-nested-highlight">DSA streak is strong.</p>
+                        <p class="ff-nested-desc">Recommendation: Increase target from 3 → 4 questions.</p>
+                        <div class="ff-nested-badge-line">Confidence: <span class="ff-badge-micro-success">High</span></div>
+                    </div>
+                    <div class="ff-nested-insight-card">
+                        <p class="ff-nested-highlight">Java completion has dropped for 3 consecutive days.</p>
+                        <p class="ff-nested-desc">Recommendation: Reduce daily target from 45 → 30 minutes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Active Habits Metrics Grid -->
+            <div class="ff-habits-card-grid">
+                <!-- Habit profile 1 -->
+                <div class="ff-glass-card ff-habit-tracking-card">
+                    <h2 class="ff-habit-card-header-title">
+                        DSA - 
+                        <svg class="ff-title-inline-icon ff-alert-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        10 Day Streak
+                    </h2>
+                    <div class="ff-habit-internal-sheet">
+                        <div class="ff-sheet-row"><span class="ff-s-lbl">Goal:</span><span class="ff-s-val">3 Questions Daily</span></div>
+                        <div class="ff-sheet-row"><span class="ff-s-lbl">Today's Target:</span><span class="ff-s-val">3 Questions</span></div>
+                        <div class="ff-sheet-row"><span class="ff-s-lbl">Completion:</span><span class="ff-s-val ff-completion-accent">70%</span></div>
+                        <div class="ff-sheet-row ff-sheet-column-mode">
+                            <span class="ff-s-lbl">AI Suggestion:</span>
+                            <span class="ff-s-val ff-suggestion-italic">Maintain current pace</span>
+                        </div>
+                    </div>
+                    <div class="ff-card-action-bar">
+                        <button class="ff-btn-subtle ff-btn-edit">EDIT</button>
+                        <button class="ff-btn-subtle ff-btn-delete">DELETE</button>
+                    </div>
+                </div>
+
+                <!-- Habit profile 2 -->
+                <div class="ff-glass-card ff-habit-tracking-card">
+                    <h2 class="ff-habit-card-header-title">
+                        Java - 
+                        <svg class="ff-title-inline-icon ff-alert-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        5 Day Streak
+                    </h2>
+                    <div class="ff-habit-internal-sheet">
+                        <div class="ff-sheet-row"><span class="ff-s-lbl">Goal:</span><span class="ff-s-val">30 Minutes Daily</span></div>
+                        <div class="ff-sheet-row"><span class="ff-s-lbl">Today's Target:</span><span class="ff-s-val">45 Minutes</span></div>
+                        <div class="ff-sheet-row"><span class="ff-s-lbl">Completion:</span><span class="ff-s-val ff-completion-accent">50%</span></div>
+                        <div class="ff-sheet-row ff-sheet-column-mode">
+                            <span class="ff-s-lbl">AI Suggestion:</span>
+                            <span class="ff-s-val ff-suggestion-italic">Increase intensity</span>
+                        </div>
+                    </div>
+                    <div class="ff-card-action-bar">
+                        <button class="ff-btn-subtle ff-btn-edit">EDIT</button>
+                        <button class="ff-btn-subtle ff-btn-delete">DELETE</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Element Action Container -->
+            <div class="ff-bottom-action-hub">
+                <button id="addHabitBtn" class="ff-btn-action ff-btn-accent ff-btn-wide">
+    ADD HABIT
+</button>
+            </div>
+        </main>
+    </div>
+    <!-- ========================================= -->
+<!-- ADD HABIT MODAL -->
+<!-- ========================================= -->
+
+<div id="addHabitModal" class="ff-modal">
+
+    <div class="ff-modal-content">
+
+        <span id="closeHabitModal" class="ff-close">&times;</span>
+
+        <h2>Add New Habit</h2>
+
+        <input
+            id="habitName"
+            type="text"
+            placeholder="Habit Name">
+
+        <input
+            id="habitGoal"
+            type="text"
+            placeholder="Goal (e.g. 3 Questions Daily)">
+
+        <input
+            id="habitTarget"
+            type="text"
+            placeholder="Today's Target">
+
+        <input
+            id="habitSuggestion"
+            type="text"
+            placeholder="AI Suggestion">
+
+        <button id="saveHabitBtn">
+            SAVE HABIT
+        </button>
+
+    </div>
+
+</div>
+    <script src="habits.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow — Premium Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="ff-app-container">
+        
+        <!-- ========================================= -->
+        <!-- SHARED SIDEBAR COMPONENT                  -->
+        <!-- ========================================= -->
+        <aside class="ff-sidebar">
+            <div class="ff-brand">
+                <svg class="ff-icon-accent ff-brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+                <span class="ff-brand-text">FocusFlow</span>
+            </div>
+            <nav class="ff-nav-menu">
+                <a href="index.html" class="ff-nav-item ff-active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="tasks.html" class="ff-nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    <span>Tasks</span>
+                </a>
+                <a href="habits.html" class="ff-nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <span>Habits</span>
+                </a>
+                <a href="coach.html" class="ff-nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 7.54 16.59c-.44.47-.64 1.12-.54 1.76l.33 2.05a.5.5 0 0 1-.72.52l-1.92-.96a1.4 1.4 0 0 0-1.25-.03A10 10 0 1 1 12 2z"/></svg>
+                    <span>AI Coach</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- ========================================= -->
+        <!-- DASHBOARD MAIN CONTENT                    -->
+        <!-- ========================================= -->
+        <main class="ff-main-view">
+            <header class="ff-view-header">
+                <div class="ff-header-welcome">
+                    <h1 class="ff-title-greet">Welcome to FocusFlow.
+                    </h1>
+                    <p class="ff-subtitle-greet">Let's make today productive.</p>
+                </div>
+                <div class="ff-header-progress">
+                    <div class="ff-progress-meta">
+                        <span class="ff-progress-title">Today's Progress</span>
+                        <span class="ff-progress-value">60%</span>
+                    </div>
+                    <div class="ff-progress-track">
+                        <div class="ff-progress-fill" style="width: 60%;"></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="ff-dashboard-grid">
+                
+                <!-- Center/Left View: Main Focus Matrix -->
+                <div class="ff-glass-card ff-focus-card">
+                    <div class="ff-focus-header">
+                        <h2 class="ff-card-title">Today's Focus</h2>
+                        <ol class="ff-focus-ordered-list">
+                            <li>DBMS Schema</li>
+                            <li>DSA - 3 Questions</li>
+                            <li>Hackathon Research</li>
+                        </ol>
+                       <button id="generatePlanBtn" class="ff-btn-action ff-btn-accent">
+    Generate AI Plan
+</button>
+                    </div>
+                    
+                    <div class="ff-divider"></div>
+                    
+                    <div class="ff-insights-wrapper">
+    <h3 class="ff-insights-heading">AI Insights</h3>
+
+    <div class="ff-insight-callout">
+        <svg class="ff-callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 16v-4"/>
+            <path d="M12 8h.01"/>
+        </svg>
+
+        <p id="aiInsightText" class="ff-insight-text">
+            Looks like DBMS was missed yesterday. Here's my suggestion:
+        </p>
+    </div>
+
+    <ul id="aiSuggestionList" class="ff-suggestion-list">
+        <li>Finish Schema today</li>
+        <li>Reduce DSA workload to 2 questions</li>
+    </ul>
+
+    <div class="ff-metric-badge-row">
+        <span class="ff-badge-label">Estimated completion chance:</span>
+        <span id="aiCompletion" class="ff-badge-value">92%</span>
+    </div>
+</div>
+                </div>
+
+                <!-- Right View Side Stack -->
+                <div class="ff-side-stack">
+                    <!-- Active Tasks Widget -->
+                    <div class="ff-glass-card ff-active-tasks-widget">
+                        <h2 class="ff-card-title">Active Tasks</h2>
+                        <div class="ff-widget-list">
+                            <div class="ff-widget-item">
+                                <span class="ff-indicator-bar"></span>
+                                <span class="ff-widget-item-text">DBMS Assignment</span>
+                            </div>
+                            <div class="ff-widget-item">
+                                <span class="ff-indicator-bar"></span>
+                                <span class="ff-widget-item-text">Hackathon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Habits Streak Widget -->
+                    <div class="ff-glass-card ff-habits-widget">
+                        <h2 class="ff-card-title">Habits</h2>
+                        <div class="ff-streak-row">
+                            <span class="ff-streak-name">DSA 
+                                <svg class="ff-mini-icon-svg ff-alert-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                            </span>
+                            <span class="ff-streak-count">10</span>
+                        </div>
+                        <div class="ff-streak-row">
+                            <span class="ff-streak-name">Java 
+                                <svg class="ff-mini-icon-svg ff-alert-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                            </span>
+                            <span class="ff-streak-count">5</span>
+                        </div>
+                        <div class="ff-streak-footer">
+                            <span class="ff-streak-footer-label">Current Streak:</span>
+                            <span class="ff-pill-badge">
+                                <svg class="ff-micro-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                15 Days
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
